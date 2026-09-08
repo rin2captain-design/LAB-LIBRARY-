@@ -1,235 +1,337 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Lab Library</title>
+<title>Lab Library</title>
 
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      background: #f5f7fa;
-      color: #222;
-    }
+<style>
+*{
+  box-sizing:border-box;
+  scroll-behavior:smooth;
+}
 
-    header {
-      background: #0b6b57;
-      color: white;
-      text-align: center;
-      padding: 30px 15px;
-    }
+body{
+  margin:0;
+  font-family:Arial,sans-serif;
+  background:#f4f8fb;
+  color:#17212b;
+}
 
-    header h1 {
-      margin: 0;
-      font-size: 32px;
-    }
+header{
+  background:linear-gradient(135deg,#073b66,#087f8c);
+  color:white;
+  padding:45px 20px 35px;
+  text-align:center;
+}
 
-    header p {
-      margin-top: 10px;
-      font-size: 16px;
-    }
+.logo{
+  font-size:42px;
+}
 
-    .container {
-      max-width: 900px;
-      margin: auto;
-      padding: 20px;
-    }
+header h1{
+  margin:8px 0;
+  font-size:34px;
+}
 
-    .welcome {
-      background: white;
-      padding: 25px;
-      border-radius: 12px;
-      text-align: center;
-      margin-bottom: 20px;
-    }
+header p{
+  margin:0;
+  opacity:.9;
+}
 
-    .welcome h2 {
-      margin-top: 0;
-    }
+nav{
+  position:sticky;
+  top:0;
+  z-index:10;
+  background:white;
+  padding:13px 8px;
+  text-align:center;
+  box-shadow:0 2px 12px #00000012;
+}
 
-    .cards {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 15px;
-    }
+nav a{
+  color:#174c6b;
+  text-decoration:none;
+  font-size:14px;
+  font-weight:bold;
+  margin:0 7px;
+}
 
-    .card {
-      background: white;
-      padding: 22px;
-      border-radius: 12px;
-      text-align: center;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.08);
-    }
+.container{
+  max-width:950px;
+  margin:auto;
+  padding:22px 16px;
+}
 
-    .card h3 {
-      margin-top: 0;
-    }
+.hero{
+  background:white;
+  border-radius:18px;
+  padding:28px 20px;
+  text-align:center;
+  box-shadow:0 5px 20px #0000000d;
+  margin-bottom:22px;
+}
 
-    .button {
-      display: inline-block;
-      margin-top: 10px;
-      padding: 10px 18px;
-      background: #0b6b57;
-      color: white;
-      text-decoration: none;
-      border-radius: 8px;
-    }
-<section id="about" style="background:white; padding:25px; margin-top:25px; border-radius:12px; text-align:center;">
-  <h2>ℹ️ About Lab Library</h2>
+.hero h2{
+  margin:0 0 10px;
+  font-size:25px;
+}
 
-  <p>
-    Lab Library is a learning platform for BMLT students
-    and laboratory professionals.
-  </p>
+.hero p{
+  line-height:1.6;
+  color:#607080;
+}
 
-  <p>
-    It provides technical interview questions,
-    laboratory concepts and Cornell Notes for easy revision.
-  </p>
+.search{
+  width:100%;
+  padding:14px;
+  border:1px solid #d5e0e8;
+  border-radius:10px;
+  font-size:15px;
+  margin-top:12px;
+}
 
-  <p>
-    Our goal is to make laboratory learning simple,
-    organized and easy to access.
-  </p>
-</section>
-    footer {
-      text-align: center;
-      padding: 25px 10px;
-      margin-top: 30px;
-      background: white;
-      color: #666;
-    }
-  </style>
+.section-title{
+  text-align:center;
+  margin:35px 0 18px;
+}
+
+.section-title h2{
+  margin:0 0 6px;
+}
+
+.section-title p{
+  margin:0;
+  color:#71808c;
+}
+
+.grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(210px,1fr));
+  gap:15px;
+}
+
+.card{
+  background:white;
+  padding:22px;
+  border-radius:16px;
+  box-shadow:0 4px 16px #0000000b;
+  border:1px solid #e8eef2;
+}
+
+.card h3{
+  margin-top:0;
+  color:#174c6b;
+}
+
+.card p{
+  color:#687783;
+  line-height:1.5;
+}
+
+.badge{
+  display:inline-block;
+  background:#e7f5f5;
+  color:#08717d;
+  padding:6px 10px;
+  border-radius:20px;
+  font-size:12px;
+  font-weight:bold;
+}
+
+.button{
+  display:inline-block;
+  margin-top:8px;
+  padding:10px 16px;
+  border-radius:9px;
+  background:#087f8c;
+  color:white;
+  text-decoration:none;
+  font-size:14px;
+  font-weight:bold;
+}
+
+.question{
+  margin-bottom:15px;
+}
+
+.question h3{
+  margin-bottom:8px;
+}
+
+.notes{
+  border-left:4px solid #087f8c;
+}
+
+footer{
+  margin-top:35px;
+  background:#073b66;
+  color:white;
+  text-align:center;
+  padding:28px 15px;
+}
+
+footer p{
+  margin:6px;
+  opacity:.85;
+}
+
+@media(max-width:600px){
+  header h1{
+    font-size:29px;
+  }
+
+  nav{
+    overflow-x:auto;
+    white-space:nowrap;
+  }
+
+  nav a{
+    display:inline-block;
+    margin:0 6px;
+  }
+}
+</style>
 </head>
 
 <body>
-<nav style="background:white; padding:12px; text-align:center; border-bottom:1px solid #ddd;">
-  <a href="index.html" style="margin:8px; text-decoration:none;">🏠 Home</a>
-  <a href="#questions" style="margin:8px; text-decoration:none;">📚 Questions</a>
-  <a href="#subjects" style="margin:8px; text-decoration:none;">🧪 Subjects</a>
-  <a href="#notes" style="margin:8px; text-decoration:none;">📖 Notes</a>
-  <a href="#about" style="margin:8px; text-decoration:none;">ℹ️ About</a>
+
+<header>
+  <div class="logo">🔬</div>
+  <h1>Lab Library</h1>
+  <p>BMLT Technical Interview Learning Hub</p>
+</header>
+
+<nav>
+  <a href="#home">🏠 Home</a>
+  <a href="#questions">📚 Questions</a>
+  <a href="#subjects">🧪 Subjects</a>
+  <a href="#notes">📖 Notes</a>
+  <a href="#about">ℹ️ About</a>
 </nav>
-  <header>
-    <h1>🔬 Lab Library</h1>
-    <p>BMLT Technical Interview Learning Hub</p>
-  </header>
 
-  <main class="container">
+<main class="container">
 
-    <section class="welcome">
-      <h2>Welcome to Lab Library 📚</h2>
-      <p>
-        Learn important BMLT laboratory topics and
-        technical interview questions in a simple way.
-      </p>
-    </section>
-</p>
-    </div>
+<section id="home" class="hero">
+  <span class="badge">BMLT LEARNING PLATFORM</span>
 
-    <div class="card">
-      <h3>🧬 Molecular Biology</h3>
-      <p>PCR and molecular laboratory concepts.</p>
-    </div>
+  <h2>Learn. Revise. Prepare. 🎓</h2>
 
-    <div class="card">
-      <h3>🛡️ Immunology</h3>
-      <p>Immunology concepts and laboratory testing.</p>
-    </div>
+  <p>
+    A simple and organized platform for BMLT students
+    and laboratory professionals to prepare for technical interviews.
+  </p>
 
-    <div class="card">
-      <h3>📋 NABL & QC</h3>
-      <p>Quality control and NABL-related topics.</p>
-    </div>
-
-  </div>
+  <input
+    class="search"
+    type="search"
+    placeholder="🔍 Search questions or subjects..."
+  >
 </section>
-    <section class="cards">
 
-      <div class="card">
-        <h3>📚 All Questions</h3>
-        <p>Access 200 technician interview questions.</p>
-        <a href="#" class="button">View Questions</a>
-      </div>
 
-      <div class="card">
-        <h3>🧪 BMLT Subjects</h3>
-        <p>Explore important laboratory subjects.</p>
-        <a href="#" class="button">Explore</a>
-      </div>
+<section id="subjects">
 
-      <div class="card">
-        <h3>📖 Cornell Notes</h3>
-        <p>Study questions using our Cornell Notes format.</p>
-        <a href="#" class="button">Study Notes</a>
-      </div>
+  <div class="section-title">
+    <h2>🧪 BMLT Subjects</h2>
+    <p>Explore important laboratory subjects</p>
+  </div>
 
-      <div class="card">
-        <h3>🔍 Search</h3>
-        <p>Find questions and topics quickly.</p>
-        <a href="#" class="button">Search</a>
-      </div>
-
-    </section>
-
-  </main>
-<section id="subjects" style="background:white; padding:25px; margin-top:25px; border-radius:12px;">
-  <h2 style="text-align:center;">🧪 BMLT Subjects</h2>
-
-  <div class="cards">
+  <div class="grid">
 
     <div class="card">
       <h3>🧪 Biochemistry</h3>
-      <p>Biochemistry concepts and interview questions.</p>
+      <p>Clinical biochemistry, instruments, calibration and QC.</p>
     </div>
 
     <div class="card">
       <h3>🩸 Hematology</h3>
-      <p>Hematology topics and technical questions.</p>
+      <p>CBC, blood cells, analyzers and hematology concepts.</p>
     </div>
 
     <div class="card">
       <h3>🦠 Microbiology</h3>
-      <p>Microbiology learning and interview preparation.</p>
+      <p>Microorganisms, culture, staining and laboratory testing.</p>
     </div>
 
     <div class="card">
       <h3>🧬 Molecular Biology</h3>
-      <p>PCR and molecular laboratory concepts.</p>
+      <p>PCR and important molecular laboratory concepts.</p>
     </div>
 
     <div class="card">
       <h3>🛡️ Immunology</h3>
-      <p>Immunology concepts and laboratory testing.</p>
+      <p>Antigen, antibody and immunological testing concepts.</p>
     </div>
 
     <div class="card">
       <h3>📋 NABL & QC</h3>
-      <p>Quality control and NABL-related topics.</p>
+      <p>Quality control, documentation and laboratory quality systems.</p>
     </div>
 
   </div>
 </section>
- <section id="notes" style="background:white; padding:25px; margin-top:25px; border-radius:12px;">
-  <h2 style="text-align:center;">📖 Cornell Notes</h2>
 
-  <p style="text-align:center;">
-    Technical interview questions will be available here
-    in our Cornell Notes format.
-  </p>
+
+<section id="questions">
+
+  <div class="section-title">
+    <h2>📚 Technical Interview Questions</h2>
+    <p>200 questions for laboratory interview preparation</p>
+  </div>
+
+  <div class="card question">
+    <span class="badge">QUESTION 01</span>
+
+    <h3>What is a Laboratory?</h3>
+
+    <p>
+      A laboratory is a facility where clinical samples
+      are examined and tested to support diagnosis,
+      monitoring and scientific investigation.
+    </p>
+
+    <a class="button" href="#notes">View Notes →</a>
+  </div>
 
   <div class="card">
-    <h3>Q1. What is a Laboratory?</h3>
+    <span class="badge">COMING NEXT</span>
+
+    <h3>199 More Questions</h3>
+
+    <p>
+      More BMLT technical interview questions will be
+      added here in an organized format.
+    </p>
+  </div>
+
+</section>
+
+
+<section id="notes">
+
+  <div class="section-title">
+    <h2>📖 Cornell Notes</h2>
+    <p>Easy revision format for technical interview preparation</p>
+  </div>
+
+  <div class="card notes">
+
+    <span class="badge">Q1 • CORNELL NOTES</span>
+
+    <h3>What is a Laboratory?</h3>
 
     <h4>🔑 Cues / Key Points</h4>
-    <p>Testing • Samples • Diagnosis • Laboratory</p>
+    <p>
+      Samples • Testing • Diagnosis • Laboratory
+    </p>
 
     <h4>📝 Detailed Notes</h4>
     <p>
-      A laboratory is a place where clinical tests and
-      scientific examinations are performed on patient samples.
+      A laboratory is a facility where clinical samples
+      such as blood, urine and other body fluids are
+      examined using appropriate laboratory methods.
     </p>
 
     <h4>💬 Short Interview Answer</h4>
@@ -237,22 +339,46 @@
       A laboratory is a facility where patient samples
       are tested to help in diagnosis and monitoring.
     </p>
-  </div>
- </section>
-  <footer>
-    <p>© 2026 Lab Library</p>
-    <p>BMLT Learning & Interview Preparation</p>
- <section id="notes" style="background:white; padding:25px; margin-top:25px; border-radius:12px;">
-  <h2 style="text-align:center;">📖 Cornell Notes</h2>
 
-  <p style="text-align:center;">
-    Technical interview questions will be available here
-    in our Cornell Notes format.
-  </p>
+  </div>
+
+</section>
+
+
+<section id="about">
+
+  <div class="section-title">
+    <h2>ℹ️ About Lab Library</h2>
+  </div>
 
   <div class="card">
-    
-  </footer>
+
+    <p>
+      <strong>Lab Library</strong> is a learning platform
+      created for BMLT students and laboratory professionals.
+    </p>
+
+    <p>
+      The platform focuses on technical interview preparation,
+      laboratory concepts and easy-to-revise Cornell Notes.
+    </p>
+
+    <p>
+      Our goal is to make laboratory learning
+      simple, organized and accessible.
+    </p>
+
+  </div>
+
+</section>
+
+</main>
+
+<footer>
+  <h3>🔬 Lab Library</h3>
+  <p>BMLT Learning & Technical Interview Preparation</p>
+  <p>© 2026 Lab Library</p>
+</footer>
 
 </body>
 </html>
