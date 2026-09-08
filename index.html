@@ -3,27 +3,141 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <title>Lab Library</title>
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background: #f5f7fa;
+      color: #222;
+    }
+
+    header {
+      background: #0b6b57;
+      color: white;
+      text-align: center;
+      padding: 30px 15px;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 32px;
+    }
+
+    header p {
+      margin-top: 10px;
+      font-size: 16px;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: auto;
+      padding: 20px;
+    }
+
+    .welcome {
+      background: white;
+      padding: 25px;
+      border-radius: 12px;
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .welcome h2 {
+      margin-top: 0;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 15px;
+    }
+
+    .card {
+      background: white;
+      padding: 22px;
+      border-radius: 12px;
+      text-align: center;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    }
+
+    .card h3 {
+      margin-top: 0;
+    }
+
+    .button {
+      display: inline-block;
+      margin-top: 10px;
+      padding: 10px 18px;
+      background: #0b6b57;
+      color: white;
+      text-decoration: none;
+      border-radius: 8px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 25px 10px;
+      margin-top: 30px;
+      background: white;
+      color: #666;
+    }
+  </style>
 </head>
 
 <body>
 
-  <h1>🔬 Lab Library</h1>
+  <header>
+    <h1>🔬 Lab Library</h1>
+    <p>BMLT Technical Interview Learning Hub</p>
+  </header>
 
-  <p>BMLT Technical Interview Questions</p>
+  <main class="container">
 
-  <hr>
+    <section class="welcome">
+      <h2>Welcome to Lab Library 📚</h2>
+      <p>
+        Learn important BMLT laboratory topics and
+        technical interview questions in a simple way.
+      </p>
+    </section>
 
-  <h2>📚 200 Technician Questions</h2>
+    <section class="cards">
 
-  <p>Learn important laboratory topics and interview questions in simple Cornell Notes format.</p>
+      <div class="card">
+        <h3>📚 All Questions</h3>
+        <p>Access 200 technician interview questions.</p>
+        <a href="#" class="button">View Questions</a>
+      </div>
 
-  <button>View Questions</button>
-<h2>🧪 Technician Questions</h2>
+      <div class="card">
+        <h3>🧪 BMLT Subjects</h3>
+        <p>Explore important laboratory subjects.</p>
+        <a href="#" class="button">Explore</a>
+      </div>
 
-<div>
-  <h3>Q1. What is a Laboratory?</h3>
-  <p>A laboratory is a place where clinical tests and scientific examinations are performed on samples such as blood, urine, and other body fluids.</p>
-</div>
+      <div class="card">
+        <h3>📖 Cornell Notes</h3>
+        <p>Study questions using our Cornell Notes format.</p>
+        <a href="#" class="button">Study Notes</a>
+      </div>
+
+      <div class="card">
+        <h3>🔍 Search</h3>
+        <p>Find questions and topics quickly.</p>
+        <a href="#" class="button">Search</a>
+      </div>
+
+    </section>
+
+  </main>
+
+  <footer>
+    <p>© 2026 Lab Library</p>
+    <p>BMLT Learning & Interview Preparation</p>
+  </footer>
+
 </body>
 </html>
