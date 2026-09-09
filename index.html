@@ -1,195 +1,419 @@
 <!DOCTYPE html>
 <html lang="en">
-<head> 
+<head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Lab Library</title>
+<title>Lab Library | BMLT Learning Hub</title>
 
 <style>
 *{
   box-sizing:border-box;
+  margin:0;
+  padding:0;
   scroll-behavior:smooth;
 }
 
 body{
-  margin:0;
-  font-family:Arial,sans-serif;
-  background:#f4f8fb;
+  font-family:Arial,Helvetica,sans-serif;
+  background:#f4f8fc;
   color:#17212b;
 }
 
 header{
-  background:linear-gradient(135deg,#073b66,#087f8c);
+  background:linear-gradient(135deg,#062f52,#087f8c);
   color:white;
-  padding:45px 20px 35px;
   text-align:center;
+  padding:40px 18px 32px;
 }
 
 .logo{
-  font-size:42px;
+  width:70px;
+  height:70px;
+  margin:auto;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  background:#ffffff20;
+  border:1px solid #ffffff35;
+  border-radius:20px;
+  font-size:35px;
 }
 
 header h1{
-  margin:8px 0;
-  font-size:34px;
+  font-size:32px;
+  margin:13px 0 5px;
 }
 
 header p{
-  margin:0;
+  font-size:14px;
   opacity:.9;
 }
 
 nav{
   position:sticky;
   top:0;
-  z-index:10;
-  background:white;
-  padding:13px 8px;
-  text-align:center;
-  box-shadow:0 2px 12px #00000012;
+  z-index:100;
+  background:#fffffff2;
+  border-bottom:1px solid #e2ebf1;
+  box-shadow:0 3px 15px #0000000b;
+}
+
+.nav{
+  max-width:1050px;
+  margin:auto;
+  display:flex;
+  justify-content:center;
+  overflow-x:auto;
+  white-space:nowrap;
 }
 
 nav a{
-  color:#174c6b;
   text-decoration:none;
-  font-size:14px;
+  color:#234c68;
+  font-size:13px;
   font-weight:bold;
-  margin:0 7px;
+  padding:14px 11px;
 }
 
 .container{
-  max-width:950px;
+  max-width:1050px;
   margin:auto;
-  padding:22px 16px;
+  padding:22px 16px 45px;
 }
 
 .hero{
   background:white;
-  border-radius:18px;
-  padding:28px 20px;
+  border:1px solid #e3ebf1;
+  border-radius:24px;
+  padding:32px 20px;
   text-align:center;
-  box-shadow:0 5px 20px #0000000d;
-  margin-bottom:22px;
+  box-shadow:0 8px 30px #0000000b;
+}
+
+.badge{
+  display:inline-block;
+  background:#e7f6f7;
+  color:#08727d;
+  padding:6px 11px;
+  border-radius:20px;
+  font-size:10px;
+  font-weight:bold;
 }
 
 .hero h2{
-  margin:0 0 10px;
-  font-size:25px;
+  color:#123d59;
+  font-size:27px;
+  margin:14px 0 9px;
 }
 
 .hero p{
-  line-height:1.6;
-  color:#607080;
+  color:#6c7d89;
+  max-width:680px;
+  margin:auto;
+  font-size:14px;
+  line-height:1.7;
 }
 
 .search{
   width:100%;
-  padding:14px;
-  border:1px solid #d5e0e8;
-  border-radius:10px;
-  font-size:15px;
-  margin-top:12px;
+  max-width:650px;
+  margin:20px auto 0;
+  display:block;
+  padding:15px;
+  border:1px solid #d7e2e9;
+  border-radius:12px;
+  font-size:14px;
+  outline:none;
+}
+
+.quick{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:14px;
+  margin-top:18px;
+}
+
+.quick-card{
+  background:white;
+  border:1px solid #e4ecf2;
+  border-radius:17px;
+  padding:19px 10px;
+  text-align:center;
+  box-shadow:0 5px 18px #00000008;
+}
+
+.quick-card .icon{
+  font-size:26px;
+}
+
+.quick-card h3{
+  font-size:13px;
+  color:#174d6b;
+  margin-top:7px;
+}
+
+.quick-card p{
+  color:#7b8994;
+  font-size:10px;
+  margin-top:3px;
+}
+
+.section{
+  margin-top:42px;
 }
 
 .section-title{
   text-align:center;
-  margin:35px 0 18px;
+  margin-bottom:20px;
 }
 
 .section-title h2{
-  margin:0 0 6px;
+  color:#143e59;
+  font-size:24px;
 }
 
 .section-title p{
-  margin:0;
-  color:#71808c;
+  color:#788793;
+  font-size:13px;
+  margin-top:4px;
 }
 
 .grid{
   display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(210px,1fr));
+  grid-template-columns:repeat(3,1fr);
   gap:15px;
 }
 
 .card{
   background:white;
-  padding:22px;
-  border-radius:16px;
-  box-shadow:0 4px 16px #0000000b;
-  border:1px solid #e8eef2;
+  border:1px solid #e2ebf1;
+  border-radius:18px;
+  padding:21px;
+  box-shadow:0 5px 20px #00000008;
 }
 
 .card h3{
-  margin-top:0;
-  color:#174c6b;
+  color:#174d6b;
+  margin:9px 0 6px;
+  font-size:17px;
 }
 
 .card p{
-  color:#687783;
-  line-height:1.5;
+  color:#6c7c87;
+  font-size:13px;
+  line-height:1.6;
 }
 
-.badge{
-  display:inline-block;
-  background:#e7f5f5;
-  color:#08717d;
-  padding:6px 10px;
-  border-radius:20px;
-  font-size:12px;
-  font-weight:bold;
+.icon-large{
+  font-size:32px;
 }
 
 .button{
   display:inline-block;
-  margin-top:8px;
-  padding:10px 16px;
+  margin-top:14px;
+  padding:10px 15px;
   border-radius:9px;
   background:#087f8c;
   color:white;
   text-decoration:none;
+  font-size:12px;
+  font-weight:bold;
+  border:0;
+  cursor:pointer;
+}
+
+.folder{
+  text-align:center;
+  padding:28px 18px;
+  cursor:pointer;
+  transition:.2s;
+}
+
+.folder:hover{
+  transform:translateY(-2px);
+}
+
+.folder-icon{
+  font-size:52px;
+}
+
+.folder h3{
+  margin-top:10px;
+}
+
+.folder small{
+  color:#7c8a94;
+}
+
+.folder-view{
+  display:none;
+  margin-top:18px;
+}
+
+.folder-view.active{
+  display:block;
+}
+
+.file{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:12px;
+  padding:16px;
+  background:white;
+  border:1px solid #e2ebf1;
+  border-radius:14px;
+  margin-bottom:10px;
+}
+
+.file-left{
+  display:flex;
+  align-items:center;
+  gap:12px;
+}
+
+.file-icon{
+  font-size:27px;
+}
+
+.file h3{
   font-size:14px;
+  color:#174d6b;
+}
+
+.file p{
+  font-size:11px;
+  color:#7a8994;
+}
+
+.note-view{
+  display:none;
+  margin-top:18px;
+  background:white;
+  border:1px solid #e2ebf1;
+  border-radius:18px;
+  padding:20px;
+  text-align:center;
+  overflow:hidden;
+}
+
+.note-view.active{
+  display:block;
+}
+
+.note-view h3{
+  color:#174d6b;
+  margin-bottom:14px;
+}
+
+.image-box{
+  width:100%;
+  overflow:auto;
+  border-radius:12px;
+  background:#f2f5f7;
+  padding:10px;
+}
+
+.image-box img{
+  display:block;
+  width:100%;
+  max-width:700px;
+  margin:auto;
+  transform-origin:center;
+  transition:transform .2s ease;
+}
+
+.zoom-buttons{
+  display:flex;
+  justify-content:center;
+  gap:10px;
+  margin-top:15px;
+}
+
+.zoom-buttons button{
+  padding:10px 16px;
+  border:0;
+  border-radius:9px;
+  background:#087f8c;
+  color:white;
+  font-weight:bold;
+  cursor:pointer;
+}
+
+.interview{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:15px;
+}
+
+.number{
+  color:#087f8c;
+  font-size:11px;
   font-weight:bold;
 }
 
-.question{
-  margin-bottom:15px;
+.status{
+  display:inline-block;
+  padding:5px 9px;
+  background:#eef6f8;
+  color:#08717d;
+  border-radius:20px;
+  font-size:10px;
+  font-weight:bold;
 }
 
-.question h3{
-  margin-bottom:8px;
-}
-
-.notes{
-  border-left:4px solid #087f8c;
+.about{
+  background:linear-gradient(135deg,#fff,#f1f8fb);
 }
 
 footer{
-  margin-top:35px;
-  background:#073b66;
+  background:#062f52;
   color:white;
   text-align:center;
-  padding:28px 15px;
+  padding:30px 15px;
+}
+
+footer h3{
+  margin-bottom:6px;
 }
 
 footer p{
-  margin:6px;
-  opacity:.85;
+  font-size:11px;
+  opacity:.75;
+  margin:3px;
 }
 
-@media(max-width:600px){
+@media(max-width:700px){
+
   header h1{
     font-size:29px;
   }
 
-  nav{
-    overflow-x:auto;
-    white-space:nowrap;
+  .quick{
+    grid-template-columns:repeat(2,1fr);
   }
 
-  nav a{
-    display:inline-block;
-    margin:0 6px;
+  .grid{
+    grid-template-columns:1fr;
+  }
+
+  .interview{
+    flex-direction:column;
+    align-items:flex-start;
+  }
+
+  .interview .button{
+    width:100%;
+    text-align:center;
+  }
+
+  .file{
+    align-items:flex-start;
+  }
+
+  .file .button{
+    margin-top:0;
   }
 }
 </style>
@@ -203,195 +427,399 @@ footer p{
   <p>BMLT Technical Interview Learning Hub</p>
 </header>
 
+
 <nav>
-  <a href="#home">🏠 Home</a>
-  <a href="#questions">📚 Questions</a>
-  <a href="#subjects">🧪 Subjects</a>
-  <a href="#notes">📖 Notes</a>
-  <a href="#about">ℹ️ About</a>
+  <div class="nav">
+    <a href="#home">🏠 Home</a>
+    <a href="#subjects">🧪 Subjects</a>
+    <a href="#interview">📚 Questions</a>
+    <a href="#cornell">📖 Cornell Notes</a>
+    <a href="#about">ℹ️ About</a>
+  </div>
 </nav>
+
 
 <main class="container">
 
-<section id="home" class="hero">
-  <span class="badge">BMLT LEARNING PLATFORM</span>
 
-  <h2>Learn. Revise. Prepare. 🎓</h2>
+<!-- HOME -->
 
-  <p>
-    A simple and organized platform for BMLT students
-    and laboratory professionals to prepare for technical interviews.
-  </p>
+<section id="home">
 
-  <input
-    class="search"
-    type="search"
-    placeholder="🔍 Search questions or subjects..."
-  >
+  <div class="hero">
+
+    <span class="badge">BMLT LEARNING PLATFORM</span>
+
+    <h2>Learn. Revise. Prepare. 🎓</h2>
+
+    <p>
+      A professional learning hub for BMLT students
+      and laboratory professionals preparing for
+      technical interviews.
+    </p>
+
+    <input
+      class="search"
+      type="search"
+      placeholder="🔍 Search questions or subjects..."
+    >
+
+  </div>
+
+
+  <div class="quick">
+
+    <div class="quick-card">
+      <div class="icon">📚</div>
+      <h3>50 Questions</h3>
+      <p>Interview Preparation</p>
+    </div>
+
+    <div class="quick-card">
+      <div class="icon">📖</div>
+      <h3>200 Notes</h3>
+      <p>Cornell Notes</p>
+    </div>
+
+    <div class="quick-card">
+      <div class="icon">🧪</div>
+      <h3>6 Subjects</h3>
+      <p>Core Laboratory</p>
+    </div>
+
+    <div class="quick-card">
+      <div class="icon">🎯</div>
+      <h3>Career Focus</h3>
+      <p>Interview Ready</p>
+    </div>
+
+  </div>
+
 </section>
 
 
-<section id="subjects">
+<!-- SUBJECTS -->
+
+<section id="subjects" class="section">
 
   <div class="section-title">
     <h2>🧪 BMLT Subjects</h2>
-    <p>Explore important laboratory subjects</p>
+    <p>Important laboratory subjects</p>
   </div>
 
   <div class="grid">
 
     <div class="card">
-      <h3>🧪 Biochemistry</h3>
+      <div class="icon-large">🧪</div>
+      <h3>Biochemistry</h3>
       <p>Clinical biochemistry, instruments, calibration and QC.</p>
+      <span class="status">CORE</span>
     </div>
 
     <div class="card">
-      <h3>🩸 Hematology</h3>
+      <div class="icon-large">🩸</div>
+      <h3>Hematology</h3>
       <p>CBC, blood cells, analyzers and hematology concepts.</p>
+      <span class="status">CORE</span>
     </div>
 
     <div class="card">
-      <h3>🦠 Microbiology</h3>
-      <p>Microorganisms, culture, staining and laboratory testing.</p>
+      <div class="icon-large">🦠</div>
+      <h3>Microbiology</h3>
+      <p>Culture, staining and important microbiology concepts.</p>
+      <span class="status">CORE</span>
     </div>
 
     <div class="card">
-      <h3>🧬 Molecular Biology</h3>
-      <p>PCR and important molecular laboratory concepts.</p>
+      <div class="icon-large">🧬</div>
+      <h3>Molecular Biology</h3>
+      <p>PCR and important molecular laboratory techniques.</p>
+      <span class="status">CORE</span>
     </div>
 
     <div class="card">
-      <h3>🛡️ Immunology</h3>
-      <p>Antigen, antibody and immunological testing concepts.</p>
+      <div class="icon-large">🛡️</div>
+      <h3>Immunology</h3>
+      <p>Antigen, antibody and immunological testing.</p>
+      <span class="status">CORE</span>
     </div>
 
     <div class="card">
-      <h3>📋 NABL & QC</h3>
-      <p>Quality control, documentation and laboratory quality systems.</p>
+      <div class="icon-large">📋</div>
+      <h3>NABL & QC</h3>
+      <p>Quality control, documentation and laboratory quality.</p>
+      <span class="status">CORE</span>
     </div>
 
   </div>
+
 </section>
 
 
-<section id="questions">
+<!-- INTERVIEW QUESTIONS -->
+
+<section id="interview" class="section">
 
   <div class="section-title">
     <h2>📚 Technical Interview Questions</h2>
-    <p>200 questions for laboratory interview preparation</p>
+    <p>50 important BMLT interview questions</p>
   </div>
 
-  <div class="card question">
-    <span class="badge">QUESTION 01</span>
+  <div class="card interview">
 
-    <h3>What is a Laboratory?</h3>
+    <div>
+      <span class="number">QUESTION 01</span>
+      <h3>What is a Laboratory?</h3>
+      <p>Basic laboratory concept and diagnostic role.</p>
+    </div>
 
-    <p>
-      A laboratory is a facility where clinical samples
-      are examined and tested to support diagnosis,
-      monitoring and scientific investigation.
-    </p>
+    <span class="status">READY</span>
 
-    <a class="button" href="#notes">View Notes →</a>
   </div>
 
-  <div class="card">
-    <span class="badge">COMING NEXT</span>
+  <br>
 
-    <h3>199 More Questions</h3>
+  <div class="card interview">
 
-    <p>
-      More BMLT technical interview questions will be
-      added here in an organized format.
-    </p>
+    <div>
+      <span class="number">QUESTIONS 02–50</span>
+      <h3>50 Question Library</h3>
+      <p>Your technical interview questions will be added here.</p>
+    </div>
+
+    <span class="status">COMING</span>
+
   </div>
 
 </section>
 
 
-<section id="notes">
+<!-- CORNELL NOTES -->
+
+<section id="cornell" class="section">
 
   <div class="section-title">
     <h2>📖 Cornell Notes</h2>
-    <p>Easy revision format for technical interview preparation</p>
+    <p>200 Cornell Notes organized like a digital folder</p>
   </div>
 
-  <div class="card notes">
-<div class="grid">
 
-  <div class="card">
-    <div class="subject-icon">📁</div>
+  <!-- FOLDER -->
+
+  <div class="card folder" onclick="openFolder()">
+
+    <div class="folder-icon">📁</div>
 
     <h3>Cornell Notes</h3>
 
-    <p>200 Cornell Notes for easy revision and interview preparation.</p>
+    <small>200 Notes • Tap to Open</small>
 
-    <a class="button" href="#cornell-notes/">Open Folder →</a>
   </div>
 
-</div>
 
-    <span class="badge">Q1 • CORNELL NOTES</span>
+  <!-- FOLDER CONTENT -->
+
+  <div id="folderView" class="folder-view">
+
+    <div class="file">
+
+      <div class="file-left">
+
+        <div class="file-icon">📄</div>
+
+        <div>
+          <h3>Q1 — Cornell Note</h3>
+          <p>What is a Laboratory?</p>
+        </div>
+
+      </div>
+
+      <button class="button" onclick="openNote()">
+        Open →
+      </button>
+
+    </div>
+
+
+    <div class="file">
+
+      <div class="file-left">
+
+        <div class="file-icon">📄</div>
+
+        <div>
+          <h3>Q2 — Cornell Note</h3>
+          <p>Coming soon</p>
+        </div>
+
+      </div>
+
+      <span class="status">SOON</span>
+
+    </div>
+
+
+    <div class="file">
+
+      <div class="file-left">
+
+        <div class="file-icon">📄</div>
+
+        <div>
+          <h3>Q3–Q200</h3>
+          <p>More Cornell Notes will be added</p>
+        </div>
+
+      </div>
+
+      <span class="status">SOON</span>
+
+    </div>
+
+  </div>
+
+
+  <!-- NOTE VIEW -->
+
+  <div id="noteView" class="note-view">
+
+    <span class="badge">Q1 • CORNELL NOTE</span>
 
     <h3>What is a Laboratory?</h3>
 
-    <h4>🔑 Cues / Key Points</h4>
-    <p>
-      Samples • Testing • Diagnosis • Laboratory
-    </p>
+    <div class="image-box">
 
-    <h4>📝 Detailed Notes</h4>
-    <p>
-      A laboratory is a facility where clinical samples
-      such as blood, urine and other body fluids are
-      examined using appropriate laboratory methods.
-    </p>
+      <img
+        id="cornellImage"
+        src="cornell-notes/IMG-20260823-WA0007.jpg"
+        alt="Q1 Cornell Note"
+      >
 
-    <h4>💬 Short Interview Answer</h4>
-    <p>
-      A laboratory is a facility where patient samples
-      are tested to help in diagnosis and monitoring.
-    </p>
+    </div>
+
+
+    <div class="zoom-buttons">
+
+      <button onclick="zoomIn()">🔍 +</button>
+
+      <button onclick="zoomOut()">🔍 −</button>
+
+      <button onclick="resetZoom()">↺ Reset</button>
+
+    </div>
 
   </div>
 
 </section>
 
 
-<section id="about">
+<!-- ABOUT -->
+
+<section id="about" class="section">
 
   <div class="section-title">
+
     <h2>ℹ️ About Lab Library</h2>
+
+    <p>Built for focused BMLT learning</p>
+
   </div>
 
-  <div class="card">
+
+  <div class="card about">
+
+    <h3>🔬 Our Mission</h3>
 
     <p>
-      <strong>Lab Library</strong> is a learning platform
-      created for BMLT students and laboratory professionals.
+      Lab Library is a learning platform designed
+      for BMLT students and laboratory professionals.
     </p>
 
+    <br>
+
     <p>
-      The platform focuses on technical interview preparation,
-      laboratory concepts and easy-to-revise Cornell Notes.
+      The platform focuses on technical interview
+      preparation, laboratory subjects and
+      easy-to-revise Cornell Notes.
     </p>
+
+    <br>
 
     <p>
       Our goal is to make laboratory learning
-      simple, organized and accessible.
+      organized, practical and easy to revise.
     </p>
 
   </div>
 
 </section>
 
+
 </main>
 
+
 <footer>
+
   <h3>🔬 Lab Library</h3>
+
   <p>BMLT Learning & Technical Interview Preparation</p>
+
   <p>© 2026 Lab Library</p>
+
 </footer>
+
+
+<script>
+
+let zoomLevel = 1;
+
+function openFolder(){
+
+  document.getElementById("folderView").classList.toggle("active");
+
+}
+
+function openNote(){
+
+  document.getElementById("noteView").classList.add("active");
+
+  document.getElementById("noteView").scrollIntoView({
+    behavior:"smooth",
+    block:"start"
+  });
+
+}
+
+function zoomIn(){
+
+  zoomLevel += 0.2;
+
+  document.getElementById("cornellImage").style.transform =
+    "scale(" + zoomLevel + ")";
+
+}
+
+function zoomOut(){
+
+  if(zoomLevel > 0.6){
+    zoomLevel -= 0.2;
+  }
+
+  document.getElementById("cornellImage").style.transform =
+    "scale(" + zoomLevel + ")";
+
+}
+
+function resetZoom(){
+
+  zoomLevel = 1;
+
+  document.getElementById("cornellImage").style.transform =
+    "scale(1)";
+
+}
+
+</script>
 
 </body>
 </html>
